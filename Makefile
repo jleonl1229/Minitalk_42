@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/04/03 12:46:38 by jleon-la          #+#    #+#              #
+#    Updated: 2024/04/03 12:47:45 by jleon-la         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC						= cc
 NAME 					= minitalk
 NAME_CLIENT				= client
@@ -32,7 +44,7 @@ fclean:
 	rm -rf ${NAME_SERVER} ${NAME_CLIENT}
 	make -C libft fclean
 
-re: 
+re:
 	make fclean 
 	make all
 
