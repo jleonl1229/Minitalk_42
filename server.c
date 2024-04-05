@@ -6,7 +6,7 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 18:09:16 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/04/04 16:32:08 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/04/05 17:12:25 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 
 void	handle_sigusr(int sigsent)
 {
-	static size_t	c;
-	static size_t	i;
+	static size_t	c = 0;
+	static size_t	i = 0;
 
 	if (sigsent == SIGUSR1)
 		c = c << 1;
 	else if (sigsent == SIGUSR2)
-	{
-		c = c << 1;
-		c = c | 1;
-	}
+		c = (c << 1) | 1;
 	i++;
 	if (i == 8)
 	{
